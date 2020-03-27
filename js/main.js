@@ -6,6 +6,22 @@ $(document).ready(function(){
          dots:true,
          autoplay:false,
          autoHeight:true,
-         margin:10
+         margin:10,
+         nav:false,
+         responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:1,
+                nav:false
+            },
+            1000:{
+                items:1,
+                nav:true,
+                loop:false
+            }
+        }
     });
   });

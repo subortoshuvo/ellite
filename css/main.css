@@ -568,6 +568,56 @@ z-index: 9;
     position: relative;
     bottom: 100px;
   }
-  .owl-stage-outer.owl-height {
+  .winner-carousel .owl-stage-outer.owl-height {
     height: 465px !important;
+  }
+
+
+  #testimonial{
+    background-color: #000;
+    ;
+  }
+
+  .testimonial-text h1{
+    border-bottom: 1px solid red;
+    width: 190px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-carousel img {
+    width: 300px !important;
+    height: 211px;
+    border-radius: 11px;
+    text-align: center;
+  }
+
+  .testimonial-carousel p {
+    color: #fff;
+    margin-top: 26px;
+    font-size: 18px;
+  }
+  .clients-info {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 31px;
+    border-top: 1px solid #CB132B;
+    margin-top: 50px;
+  }
+  .clients-info h5{
+    color: #fff;;
+  }
+
+  .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    display: none;
+  }
+
+
+  .tp-stars--5 .tp-star:nth-of-type(-n+5) .tp-star__canvas, .tp-stars--5 .tp-star:nth-of-type(-n+5) .tp-star__canvas--half {
+    fill: #00b67a;
   }
