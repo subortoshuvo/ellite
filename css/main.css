@@ -1,0 +1,567 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Lato', sans-serif;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* ==========================================================================
+   nav section
+   ========================================================================== */
+header{
+  background-color: #000000	;
+  border-bottom: 1px solid red;
+padding: 22px 0;
+position: relative;
+z-index: 9;
+}
+.nav-logo{
+  width: 200px;
+}
+.navbar li a {
+	color: #fff;
+	line-height: 1.8;
+	font-size: 17px;
+  font-family: 'Nunito Sans', sans-serif;
+  margin-right: 18px;
+}
+.dragon-img{
+  width: 100px;
+}
+.navbar ul li:hover {
+	background: #fff;
+	color: #000;
+}
+
+.navbar ul li:hover a{
+  color: #000;
+}
+.btn{
+  background-color: red;
+}
+
+/* ==========================================================================
+   Home slider section
+   ========================================================================== */
+
+#home-slider{
+ 
+  background-color: #000;
+}
+.carousel{
+  width: 1000px;
+  margin: auto;
+}
+.carousel-caption h5 {
+	font-size: 32px;
+	font-weight: bold;
+	font-family: roboto;
+}
+
+.btn.text-light {
+	padding: 10px 48px;
+	font-size: 20px;
+	/* font-weight: bold; */
+}
+
+/* ==========================================================================
+      Ticket System section
+   ========================================================================== */
+
+#ticket-system{
+  background-color: #000;
+  color: #fff;
+}
+#ticket-system h1 {
+	/* text-decoration: underline; */
+	border-bottom: 1px solid red;
+	width: 319px;
+}
+
+.ticket-content p {
+ 
+    color: #fff;
+    line-height: 1.8;
+    font-size: 17px;
+    font-family: 'Nunito Sans', sans-serif;
+ 
+}
+
+
+/* ==========================================================================
+      Featured-Competitions section
+   ========================================================================== */
+
+
+#Featured-Competitions{
+  background-color: #000;
+}
+#Featured-Competitions h1 {
+	/* text-decoration: underline; */
+	border-bottom: 1px solid red;
+  width: 326px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.feature-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.feature-img{
+  border-radius: 15px;
+
+    max-width: 100%;
+    height: auto;
+    width: 350px;
+    height: 210px;
+  
+}
+.feature-img:hover{
+  border-radius: 15px;
+  transform: scaleY(1.5);
+  
+}
+.price-item {
+	background: red;
+	color: #fff;
+	padding: 2px 43px;
+	position: absolute;
+	top: 67px;
+}
+
+.feature-title {
+	/* bottom: 0; */
+	/* left: 0; */
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	background-color: #808080b5;
+	color: #fff;
+	position: absolute;
+	padding: 10px;
+	/* border: ; */
+	bottom: 16px;
+}
+
+.on-sale.mr-2 {
+	background: red;
+	color: #fff;
+	padding: 2px 47px;
+	position: absolute;
+	top: 26px;
+}
+
+/* ==========================================================================
+      More-Competitions section
+   ========================================================================== */
+
+
+#more-Competitions{
+  background-color: #000
+;
+}
+.more-competition-text h1{
+  border-bottom: 1px solid red;
+  width: 280px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.more-Competition-item {
+	position: relative;
+	-webkit-transition: .3s;
+	transition: .3s;
+	display: block;
+	color: #fff;
+
+  border-radius: 10px;
+  overflow: hidden;
+  width: 250px;
+	height: 150px;
+  position: relative;
+  
+}
+
+.ribbon {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	position: absolute;
+	z-index: 999;
+}
+.ribbon-top-right {
+	top: -10px;
+	right: -10px;
+}
+.ribbon.red span {
+	background-color: red;
+}
+.ribbon span {
+	width: 200px;
+	padding: 10px 0;
+	font-size: 8px;
+}
+.ribbon-top-right span {
+	left: 10px;
+	top: 30px;
+	transform: rotate(45deg);
+}
+
+
+.ribbon span {
+	position: absolute;
+	display: block;
+	width: 200px;
+	
+	box-shadow: 0 5px 10px rgba(0,0,0,.1);
+	color: #fff;
+	font-size: 0.9rem;
+	font-weight: 700;
+	line-height: 1;
+	text-shadow: 0 1px 1px rgba(0,0,0,.2);
+	text-transform: uppercase;
+	text-align: center;
+}
+#more-Competitions .feature-title {
+	/* bottom: 0; */
+	/* left: 0; */
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	background-color: #808080b5;
+	color: #fff;
+	position: absolute;
+	padding: 10px;
+	/* border: ; */
+	bottom: 0px;
+}
+#more-Competitions  .price-item {
+	background: red;
+	color: #fff;
+	padding: 2px 43px;
+	position: absolute;
+	top: 26px;
+}
+#more-Competitions .more-img img{
+  border-radius: 10px;
+
+  
+}
+#more-Competitions .more-img:hover{
+  border-radius: 10px;
+  transform: scaleY(1.5);
+  
+}
+
+
+/* ==========================================================================
+     Winner section
+   ========================================================================== */
+
+   #winner{
+     background-color: #000;
+   }
+   .winner-text h1 {
+    color: #fff;
+    border-bottom: 1px solid red;
+    width: 324px;
+    margin-bottom: 40px;
+  }
+   .winner-carousel img {
+    height: 450px;
+    border-radius: 10px;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+    padding: 8px;
+  }
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: red;
+  }
+  .owl-carousel .caption {
+
+    color: #fff;
+    font-size: 32px;
+
+    line-height: 1.8;
+    font-size: 21px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    position: relative;
+    bottom: 100px;
+  }
+  .owl-stage-outer.owl-height {
+    height: 465px !important;
+  }
